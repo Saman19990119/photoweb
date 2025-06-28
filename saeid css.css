@@ -2,8 +2,7 @@
 h1{
 	text-align: center;
 	filter: brightness(100%);
-	border-radius:10px;
-	border: solid thin black;
+	font-family:"Times New Roman";
 }
 img{
 	width: 300px;
@@ -21,13 +20,12 @@ img:hover{
 	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
-	
-	
 }
 div.main div.images p{
-	margin-top: 5px;
+	margin-top: 0px;
 	text-align: center;
+	font-size: 30px;
 }
 body{
-	background:linear-gradient(45deg,blue,gray,blue);
+	background:linear-gradient(45deg,white,gray,white);
 }
