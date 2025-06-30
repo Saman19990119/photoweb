@@ -1,7 +1,8 @@
 @charset "utf-8";
 body{
-	background:linear-gradient(45deg,white,gray,white);
+	background:#A3A3A3
 }
+
 div.mainbox{
 	width: 100%;
 	height: 100%;
