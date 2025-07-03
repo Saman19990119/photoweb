@@ -2,6 +2,43 @@
 body{
 	background:linear-gradient(45deg,white,gray,white);
 }
+body{
+	background:#A3A3A3
+}
+div.menue_bar{
+	display: flex;
+	width: 100%;
+	background-color:lightslategray;
+	margin:0px 0px 30px 0px;
+	border-radius: 10px;
+	padding:0px;
+}
+div.menue_bar ul li{
+	float: left;
+	list-style-type: none;
+}
+div.menue_bar ul li div.inlinediv{
+	*border: solid thin;
+	margin-left: 30px;
+	cursor: pointer;
+	padding: 20px;
+	margin-bottom:-15px;
+	margin-top: -15px;
+	transition: 0.25s;
+}
+div.menue_bar ul li div.inlinediv:hover{
+	background-color:silver;
+}
+
+
+div.menue_bar ul li div.inlinediv a{
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+}
+
+
+
 h1{
 	text-align: center;
 	filter: brightness(100%);
