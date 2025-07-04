@@ -1,32 +1,6 @@
 @charset "utf-8";
 body{
-	background:linear-gradient(45deg,white,gray,white);
-}
-
-img{
-	width: 300px;
-	height: 200px;
-	margin: 10px;
-	border-radius: 50px;
-	transition: 0.9s 0s;
-	cursor: pointer;
-}
-img:hover{
-	border-radius: 10px;
-}
-.images{
-	width: 310px;
-	height: 300px;
-	margin-left: auto;
-	margin-right: auto;
-}
-div.main div.images p{
-	margin-top: 0px;
-	text-align: center;
-	font-size: 30px;
-}
-div.main div.images{
-	float: left;
+	background:#A3A3A3
 }
 .menue{
 	width: 100%;
@@ -86,3 +60,37 @@ li ul li:hover{
 .sumbutton{
 	padding-top: 0px;
 }
+
+
+
+.calc_container{
+margin-top: 25px;
+}
+.submit{
+	font-size: 25px;
+	background-color: darkslategray;
+	border-radius: 10px;
+	cursor: pointer;
+	float: left;
+}
+.submit:hover{
+	transform: scale(1.02)
+}
+#times{
+	font-size: 25px;
+	background:darkslategray;
+	border-radius: 10px;
+	float: left;
+}
+#result{
+	border:none;
+	font-size: 30px;
+	width: 350px;
+	margin-top: 0px;
+	margin-left: 500px;
+	margin-right: auto;
+	border-radius: 10px;
+	background-color:darkslategray;
+	padding-left: 10px;
+	color: lightslategray
+	}
