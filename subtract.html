@@ -16,32 +16,45 @@
 			<ul>
 				<li><a href="sum.html" class="sumbutton">Summation</a></li>
 				<li><a href="subtract.html" class="sumbutton">Subtraction</a></li>
+				<li><a href="ratio.html" class="sumbutton">Ratio</a></li>
 			</ul>
 		</li>
 	</ul>
 	</div><hr>
+	<h1 class="sublable">Subtraction operator</h1>
 	<div class="calc_container">
-		<input id="times" placeholder="e.g: 2.30+1.45+3.0">
-		<button onclick="sumTimes()" class="submit">Calculate</button>
+		<input id="times" placeholder="e.g: 5.30-3.25">
+		<button onclick="diffTimes()" class="submit">Calculate</button>
 		<p id="result" >result</p>
 	</div>
-<script>
-function sumTimes() {
-  let input = document.getElementById("times").value;
-  let timesArray = input.split("+");
-  let totalMinutes = 0;
 
-  timesArray.forEach(function(item){
-    let parts = item.split(".");
-    let hour = parseInt(parts[0]);
-    let minute = parseInt(parts[1]);
-    totalMinutes += (hour*60 + minute);
-  });
+  <script>
+    function diffTimes() {
+		
+      let input = document.getElementById("times").value;
+      let timesArray = input.split("-");
+		
+      if (timesArray.length !== 2) {
+        document.getElementById("result").innerHTML = "Enter just two times";
+        return;
+      }
+      let parts1 = timesArray[0].split(".");
+      let h1 = parseInt(parts1[0]);
+      let m1 = parseInt(parts1[1]);
+      let totalMin1 = (h1 * 60) + m1;
 
-  let result = Math.floor(totalMinutes/60) + ":" + (totalMinutes%60) ;
-  document.getElementById("result").innerHTML = "Total time =  " + result;
-}
-</script>
+      let parts2 = timesArray[1].split(".");
+      let h2 = parseInt(parts2[0]);
+      let m2 = parseInt(parts2[1]);
+      let totalMin2 = (h2 * 60) + m2;
+
+      let diff = Math.abs(totalMin1 - totalMin2);
+
+      let result = Math.floor(diff / 60) + ":" + (diff % 60);
+
+       document.getElementById("result").innerHTML = "Differece= " + result;
+    }
+  </script>
 
 	
 	

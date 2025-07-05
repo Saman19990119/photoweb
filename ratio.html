@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="ratio style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<div class="menue">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="wallpapers.html">Wallpapers</a></li>
+		<li><a>Operations on times</a>
+			<ul>
+				<li><a href="sum.html" class="sumbutton">Summation</a></li>
+				<li><a href="subtract.html" class="sumbutton">Subtraction</a></li>
+				<li><a href="ratio.html" class="sumbutton">Ratio</a></li>
+			</ul>
+		</li>
+	</ul>
+	</div><hr>
+	<h1 class="sublable">Ratio operator</h1>
+	<div class="calc_container">
+		<input id="times" placeholder="e.g: 3:30(time) * 1.4(ratio)">
+		<button onclick="calculateCoef()" class="submit">Calculate</button>
+		<p id="result" >result</p>
+</div>
+<script>
+    function calculateCoef() {
+      let input = document.getElementById("times").value;
+      let parts = input.split("*");
+
+      if (parts.length !== 2) {
+        document.getElementById("result").innerHTML = "Wrong format";
+        return;
+      }
+		
+		let time = parts[0].split(":");
+      let h1 = parseInt(time[0]);
+      let m1 = parseInt(time[1]);
+      let totalMin = (h1 * 60) + m1;
+
+      let ratio = parseFloat(parts[1]);
+
+      if (isNaN(ratio) || isNaN(totalMin)) {
+        document.getElementById("result").innerHTML = "both numbers must be INT";
+        return;
+      }
+
+      let totalMin1 = Math.floor(ratio * totalMin);
+      let hours = Math.floor(totalMin1 / 60);
+      let minutes = totalMin1 % 60;
+
+      document.getElementById("result").innerHTML = "Time cross Ratio= " + hours +":" + minutes;
+    }
+  </script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

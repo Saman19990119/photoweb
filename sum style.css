@@ -2,6 +2,11 @@
 body{
 	background:#A3A3A3
 }
+h1.sumlable{
+	text-align: center;
+	margin: 40px auto 40px auto;
+	color: dimgray;
+}
 .menue{
 	width: 100%;
 	background-color: darkslategray;
@@ -59,12 +64,14 @@ li ul li:hover{
 }
 .sumbutton{
 	padding-top: 0px;
+	padding-bottom: 6px;
 }
 
 
 
 .calc_container{
-margin-top: 25px;
+	width: 860px;
+	margin: 0px auto 0px auto;
 }
 .submit{
 	font-size: 25px;
